@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <main>
+    <form action="/challenges" method="GET">
+        <section>
+            <h2>How can we help you?</h2>
+            <ul>
+                <li>
+                    <label for="user_name">Your Name</label>
+                    <input type="text" name="user_name" id="user_name" required>
+                </li>
+                <li>
+                    <label for="user_email">Your E-Mail Address</label>
+                    <input type="email" name="user_email" id="user_email">
+                </li>
+                <li>
+                    <label for="user_phone">Your Phone Number</label>
+                    <input type="tel" name="user_phone" id="user_phone" required minlength="5">
+                </li>
+                <li>
+                    <label for="message">Your Message</label>
+                    <textarea name="message" id="message" rows="6" required minlength="10" maxlength="200"></textarea> 
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <label for="find_us">How did you find us?</label>
+            <select name="find_us" id="find_us">
+            <option value="search">Web Search</option>
+            <option value="word-of-mouth">Word of Mouth</option>
+            <option value="other">Other</option>
+        </select> 
+        </section>
+
+        <section>
+            <h2>How should we reply?</h2>
+            <ul>
+                <li class="form_reply">
+                    <input type="radio" name="reply" id="reply_phone" value="phone" required>
+                <label for="reply_phone">Call me</label>
+                </li>
+                <li class="form_reply">
+                    <input type="radio" name="reply" id="reply_email" value="email" required>
+                    <label for="reply_email">Send me an email</label>
+                </li>
+                <li class="form_reply">
+                    <input type="radio" name="reply" id="reply-none" value="none" required>
+                    <label for="don't_reply">Don't reply</label>
+                </li>
+            </ul>
+        </section>
+        <section class="form_reply">
+            <input type="checkbox" name="accept_terms" id="accept_terms" required>
+            <label for="accept_terms">Accept Terms</label>
+        </section>
+        <section id="form-action">
+        <button type="reset" class="btn_empty">Clear</button>
+        <button type="submit" class="btn_filled">Submit</button>
+        </section>
+</form>
+</main>
+</body>
+</html>
